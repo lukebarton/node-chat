@@ -10,7 +10,7 @@
         head.js('https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js', 'script/underscore.js', 'script/backbone.js', 'script/socket.io.js', function () {
             head.js('script/model.js', 'script/views.js', function () {
 
-                var host = window.location.hostname;
+                var msgs = new MessageList;
                 var connection = new Connection({ socket : new io.Socket(window.location.hostname, {port: 1234}), messages :  msgs });
                 var app = new AppView({
                     model : connection,
