@@ -73,7 +73,7 @@ var ChatServer = {
         socket.on('clientDisconnect', function(client){
             if (client.nick) {
                 console.log('DISCONNECT ' + client.nick);
-                socket.systemMessage(client.nick + ' Disconnected');
+                socket.broadcast(server.systemMessage(client.nick + ' Disconnected');
             }
         });
     },
